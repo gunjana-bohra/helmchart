@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: gitlab
-          image: gitlab/gitlab-ee:latest  # Change to gitlab-ce if you prefer
+          image: gitlab/gitlab-ce:latest  # Change to gitlab-ce if you prefer
           ports:
             - containerPort: 80
             - containerPort: 443
