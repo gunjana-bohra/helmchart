@@ -28,5 +28,5 @@ jobs:
      - name: Deploy to GKE
        run: |
          kubectl apply -f namespace.yaml
-         kubectl apply -f deployment.yaml
+         kubectl apply -f deployement.yaml
          kubectl apply -f service.yaml
