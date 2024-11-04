@@ -1,27 +1,25 @@
-name: Deploy to Kubernetes
+name: Deploy to GKE
 on:
  push:
    branches:
-     - k8s  # Change to your default branch if needed
+     - k8s
 jobs:
- deploy_cluster_1:
+ deploy:
    runs-on: ubuntu-latest
    steps:
      - name: Checkout code
        uses: actions/checkout@v2
-     - name: Set up kubectl
-       uses: azure/setup-kubectl@v1
+     - name: Authenticate to Google Cloud
+       uses: google-github-actions/auth@v1
        with:
-         version: 'latest'
-     - name: Configure Kubernetes context for Cluster 1
-       env:
-         KUBECONFIG: ${{ secrets.KUBECONFIG_CLUSTER_1 }}
+         credentials_json: '${{ secrets.GCP_ACCESS_KEY }}'
+     - name: Configure kubectl for GKE
        run: |
-         mkdir -p $HOME/.kube
-         echo "$KUBECONFIG" | base64 --decode > $HOME/.kube/config
-         kubectl config use-context gke_mlconsole-poc_us-central1_gitlab
-     - name: Deploy to Cluster 1
+         gcloud container clusters get-credentials YOUR_CLUSTER_NAME --zone YOUR_CLUSTER_ZONE --project YOUR_PROJECT_ID
+     - name: Deploy to GKE
        run: |
          kubectl apply -f namespace.yaml
          kubectl apply -f deployment.yaml
          kubectl apply -f service.yaml
+
+  
