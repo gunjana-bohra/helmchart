@@ -1,0 +1,13 @@
+stages:
+  - deploy
+
+deploy_cluster_1:
+  stage: deploy
+  script:
+    - echo "Deploying to Cluster 1"
+    - kubectl apply -f namespace.yaml --context= gke_mlconsole-poc_us-central1_gitlab
+    - kubectl apply -f deployment.yaml --context= gke_mlconsole-poc_us-central1_gitlab
+    - kubectl apply -f service.yaml --context= gke_mlconsole-poc_us-central1_gitlab
+  only:
+    - master
+
