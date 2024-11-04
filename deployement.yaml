@@ -20,5 +20,6 @@ spec:
             - containerPort: 80
             - containerPort: 443
           env:
-            GITLAB_OMNIBUS_CONFIG: |
-              external_url 'http://gitlab.example.com'  # Replace with your domain
+           - name: GITLAB_OMNIBUS_CONFIG
+             value: |
+               external_url 'http://gitlab.example.com'  # Replace with your domain
