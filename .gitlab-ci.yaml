@@ -1,3 +1,6 @@
+on:
+  push:
+    branches: [ "master" ]
 stages:
   - deploy
 
@@ -8,8 +11,4 @@ deploy_cluster_1:
     - kubectl apply -f namespace.yaml --context= gke_mlconsole-poc_us-central1_gitlab
     - kubectl apply -f deployment.yaml --context= gke_mlconsole-poc_us-central1_gitlab
     - kubectl apply -f service.yaml --context= gke_mlconsole-poc_us-central1_gitlab
- on:
-  push:
-    branches:
-      - master
 
