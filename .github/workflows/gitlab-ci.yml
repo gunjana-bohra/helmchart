@@ -15,7 +15,7 @@ jobs:
          credentials_json: '${{ secrets.GCP_ACCESS_KEY }}'
      - name: Configure kubectl for GKE
        run: |
-         gcloud container clusters get-credentials YOUR_CLUSTER_NAME --zone YOUR_CLUSTER_ZONE --project YOUR_PROJECT_ID
+         gcloud container clusters get-credentials get-credentials gitlab --region us-central1 --project mlconsole-poc
      - name: Deploy to GKE
        run: |
          kubectl apply -f namespace.yaml
