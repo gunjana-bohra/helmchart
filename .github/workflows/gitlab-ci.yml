@@ -3,7 +3,7 @@ name: Deploy to Kubernetes
 on:
   push:
     branches:
-      - main  # Change to your default branch if needed
+      - k8s  # Change to your default branch if needed
 
 jobs:
   deploy_cluster_1:
