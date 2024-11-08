@@ -1,10 +1,11 @@
 # ./base/kustomization.yaml
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-helmGlobals:
-  chartHome: .
-helmCharts:
-- name: charts
-  version: v1.5.3
-  releaseName: my-argo
-  namespace: cert-manager
+apiVersion: builtin
+kind: HelmChartInflationGenerator
+metadata:
+  name: argo-cd
+name: argo-cd
+repo: https://github.com/argoproj/argo-helm
+releaseName: argo-cd
+namespace: my-namespace
+version: "7.7.0"
+valuesFile: values.yaml
