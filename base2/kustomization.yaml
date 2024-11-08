@@ -1,8 +1,0 @@
-# ./base/kustomization.yaml
-helmCharts:
-- name: argo-cd
-  repo: git::https://github.com/gunjana-bohra/helmchart.git//base2
-  version: v1.5.3
-  releaseName: my-release
-  namespace: my-namespace
-  valuesFile: values.yaml

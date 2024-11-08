@@ -1,9 +1,15 @@
 # ./kustomization.yaml
 resources:
 - base
-- base2
 
 patches:
 - path: ignore-deployment-mutation-patch.yaml
   target:
     kind: Deployment
+helmCharts:
+- name: argo-cd
+  chartPath: ./base2/helmChart.yaml
+  version: v1.5.3
+  releaseName: my-release
+  namespace: my-namespace
+  valuesFile: values.yaml
