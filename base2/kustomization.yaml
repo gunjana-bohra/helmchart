@@ -1,5 +1,5 @@
 resources:
-- clusterIssuer.yaml
+- helmChart.yaml
 generators:
 - helmChart.yaml
 # namespace: cert-manager
