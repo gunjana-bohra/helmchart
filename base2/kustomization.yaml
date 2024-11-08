@@ -1,5 +1,5 @@
 resources:
 - helmChart.yaml
-generators:
-- helmChart.yaml
+# generators:
+# - helmChart.yaml
 # namespace: cert-manager
