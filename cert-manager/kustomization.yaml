@@ -1,7 +1,8 @@
+# ./kustomization.yaml
 resources:
-- clusterIssuer.yaml
+- base
 
-generators:
-- helmChart.yaml
-
-namespace: cert-manage
+patches:
+- path: ignore-deployment-mutation-patch.yaml
+  target:
+    kind: Deployment
