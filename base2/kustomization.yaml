@@ -1,6 +1,6 @@
 # ./base/kustomization.yaml
 helmGlobals:
-  chartHome: ./charts
+  chartHome: ./
 helmCharts:
 - name: argo
   version: v1.5.3
