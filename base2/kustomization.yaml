@@ -1,2 +1,8 @@
-generators:
-- helmChart.yaml
+# ./base/kustomization.yaml
+helmGlobals:
+  chartHome: ./charts/helmChart.yaml
+helmCharts:
+- name: argo
+  version: v1.5.3
+  releaseName: my-argo
+  namespace: cert-manager
