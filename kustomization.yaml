@@ -1,7 +1,7 @@
 # ./kustomization.yaml
 resources:
 - base
-- base2/helmChart.yaml
+- base2
 
 patches:
 - path: ignore-deployment-mutation-patch.yaml
