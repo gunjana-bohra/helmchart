@@ -1,5 +1,8 @@
-resources:
-- helmChart.yaml
-# generators:
-# - helmChart.yaml
-# namespace: cert-manager
+# ./base/kustomization.yaml
+helmCharts:
+- name: cert-manager
+  repo: https://github.com/gunjana-bohra/helmchart/tree/helm/base2
+  version: v1.5.3
+  releaseName: my-release
+  namespace: my-namespace
+  valuesFile: values.yaml
