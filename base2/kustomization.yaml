@@ -1,7 +1,7 @@
 # ./base/kustomization.yaml
 helmCharts:
-- name: cert-manager
-  repo: https://github.com/gunjana-bohra/helmchart/tree/helm/base2
+- name: argo-cd
+  repo: git::https://github.com/gunjana-bohra/helmchart.git//base2
   version: v1.5.3
   releaseName: my-release
   namespace: my-namespace
