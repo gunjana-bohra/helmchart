@@ -1,11 +1,7 @@
 # ./base/kustomization.yaml
-apiVersion: builtin
-kind: HelmChartInflationGenerator
-metadata:
-  name: argo-cd
-name: argo-cd
-repo: https://github.com/argoproj/argo-helm
-releaseName: argo-cd
-namespace: my-namespace
-version: "7.7.0"
-valuesFile: values.yaml
+helmCharts:
+- name: cert-manager
+  repo: https://github.com/argoproj/argo-helm
+  version: v1.5.3
+  releaseName: argo-cd
+  namespace: cert-manager
