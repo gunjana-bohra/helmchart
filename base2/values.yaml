@@ -8,6 +8,6 @@ webhook:
   hostNetwork: true
   securePort: 10260
 
-global:
-  leaderElection:
-    namespace: cert-manager
+# global:
+#   leaderElection:
+#     namespace: cert-manager
