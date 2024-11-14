@@ -1,0 +1,4 @@
+# overlays/dev/values-dev.yaml
+app:
+  version: "dev-1.0"
+  dbHost: "dev-db-host"

@@ -1,0 +1,5 @@
+# base/helm-chart/values.yaml
+app:
+  name: "MyApp"
+  version: "1.0"
+  dbHost: "default-db-host"
