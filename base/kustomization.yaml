@@ -1,5 +1,5 @@
 # base/kustomization.yaml
 helmCharts:
   - name: my-app
-    repo: file://helm-chart/
+    repo: file://helmchart/
     valuesFile: helm-chart/values.yaml  # Default values.yaml for the Helm chart
