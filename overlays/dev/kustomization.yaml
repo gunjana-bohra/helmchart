@@ -4,5 +4,5 @@ resources:
 
 helmCharts:
   - name: my-app
-    repo: file://github.com/gunjana-bohra/helmchart/tree/helm/base/helmchart  # Path to Helm chart in the base directory
+    repo: file://../../base/helmchart  # Path to Helm chart in the base directory
     valuesFile: overlays/dev/values.yaml  # Dev-specific values.yaml

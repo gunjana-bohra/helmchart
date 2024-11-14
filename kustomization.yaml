@@ -1,4 +1,3 @@
 # kustomization.yaml (Main entry point)
 resources:
   - overlays/dev      # Reference dev overlay
-
