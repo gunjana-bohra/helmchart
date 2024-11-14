@@ -1,6 +1,6 @@
 # overlays/dev/kustomization.yaml
 bases:
-  - ../../base  # Reference the base configuration
+  - ../../base/helmchart  # Reference the base configuration
 
 helmCharts:
   - name: my-app
