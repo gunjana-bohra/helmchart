@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
- name: example-namespace-config
- namespace: example-namespace
-data:
- key: "namespace-specific-value"
